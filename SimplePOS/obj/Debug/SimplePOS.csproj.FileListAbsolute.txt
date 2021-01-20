@@ -1,0 +1,16 @@
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe.config
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\bin\Debug\SimplePOS.pdb
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmMain.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.Properties.Resources.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.csproj.GenerateResource.cache
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.csproj.CoreCompileInputs.cache
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.exe
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.pdb
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPosition.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmUserView.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmUserUpdate.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmUserAdd.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.csprojAssemblyReference.cache
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemAdd.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemView.resources

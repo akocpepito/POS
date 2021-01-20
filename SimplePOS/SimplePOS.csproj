@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3E95653-9B0B-4035-9C76-567E7D73A33E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SimplePOS</RootNamespace>
+    <AssemblyName>SimplePOS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemAdd.Designer.cs">
+      <DependentUpon>frmItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemView.Designer.cs">
+      <DependentUpon>frmItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserUpdate.Designer.cs">
+      <DependentUpon>frmUserUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserAdd.Designer.cs">
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosition.Designer.cs">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserView.Designer.cs">
+      <DependentUpon>frmUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDBData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDBData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userDBset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>userDBset.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemAdd.resx">
+      <DependentUpon>frmItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemView.resx">
+      <DependentUpon>frmItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserUpdate.resx">
+      <DependentUpon>frmUserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserAdd.resx">
+      <DependentUpon>frmUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosition.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserView.resx">
+      <DependentUpon>frmUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ItemDB.xsc">
+      <DependentUpon>ItemDB.xsd</DependentUpon>
+    </None>
+    <None Include="ItemDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ItemDB.xss">
+      <DependentUpon>ItemDB.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBData.xsc">
+      <DependentUpon>POSDBData.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDBData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDBData.xss">
+      <DependentUpon>POSDBData.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet.xsc">
+      <DependentUpon>POSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDBDataSet.xss">
+      <DependentUpon>POSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet1.xsc">
+      <DependentUpon>POSDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDBDataSet1.xss">
+      <DependentUpon>POSDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet2.xsc">
+      <DependentUpon>POSDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDBDataSet2.xss">
+      <DependentUpon>POSDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet3.xsc">
+      <DependentUpon>POSDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="POSDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDBDataSet3.xss">
+      <DependentUpon>POSDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="userDBset.xsc">
+      <DependentUpon>userDBset.xsd</DependentUpon>
+    </None>
+    <None Include="userDBset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>userDBset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="userDBset.xss">
+      <DependentUpon>userDBset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
