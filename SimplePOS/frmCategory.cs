@@ -48,7 +48,7 @@ namespace SimplePOS
                 SqlDataReader sdr = cmd.ExecuteReader();
                 cn.Close();
 
-                MessageBox.Show("New Position has been added!");
+                MessageBox.Show("New Category has been added!");
 
                 //ClearFields();
                 // RefreshGrid();

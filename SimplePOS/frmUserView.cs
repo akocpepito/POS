@@ -18,6 +18,10 @@ namespace SimplePOS
             InitializeComponent();
         }
 
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        int updateIndex;
+        int updateID;
+
         private void FrmUserView_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'userDBset.tblUser' table. You can move, or remove it, as needed.
@@ -25,10 +29,6 @@ namespace SimplePOS
             btnUpdate.Enabled = false;
 
         }
-
-        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
-        int updateIndex;
-        int updateID;
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
