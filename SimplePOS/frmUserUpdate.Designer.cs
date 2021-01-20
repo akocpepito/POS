@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class frmUserUpdate
+    partial class FrmUserUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -217,7 +217,7 @@
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnCancel
             // 
@@ -258,7 +258,7 @@
             this.Name = "frmUserUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update User";
-            this.Load += new System.EventHandler(this.frmUserUpdate_Load);
+            this.Load += new System.EventHandler(this.FrmUserUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

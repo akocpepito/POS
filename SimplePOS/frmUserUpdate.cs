@@ -11,21 +11,21 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmUserUpdate : Form
+    public partial class FrmUserUpdate : Form
     {
-        public frmUserUpdate(int num)
+        public FrmUserUpdate(int num)
         {
             InitializeComponent();
             updateID = num;
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
         readonly int updateID;
         int posCount;
 
-        private void frmUserUpdate_Load(object sender, EventArgs e)
+        private void FrmUserUpdate_Load(object sender, EventArgs e)
         {
-            loadPosition();
+            LoadPosition();
             LoadFormEntries();
             txtStaffNo.Enabled = false;
 
@@ -54,7 +54,7 @@ namespace SimplePOS
             
         }
 
-        private void loadPosition() // initializes the Position Combo Box
+        private void LoadPosition() // initializes the Position Combo Box
         {
             SqlCommand cmd = new SqlCommand("Select Description from tblPosition", cn);
             DataTable dt = new DataTable();
@@ -74,7 +74,7 @@ namespace SimplePOS
             cn.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             string name = txtLname.Text + ", " + txtFname.Text + " " + txtMname.Text + ".";
             SqlCommand cmd = new SqlCommand("UPDATE tblUser SET Username = '"+txtUname.Text+"', Password = '"+txtPwd.Text+"', LastName = '"+txtLname.Text+"', FirstName = '"+txtFname.Text+"', MiddleName = '"+txtMname.Text+"', Address = '"+txtAddress.Text+"', ContactNum = '"+txtContactNum.Text+"', Position = '"+cbPosition.Text+"', Name = '"+name+"' WHERE ID = '"+txtStaffNo.Text+"'", cn); 

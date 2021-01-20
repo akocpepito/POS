@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class FrmItemAdd
+    partial class FrmItemUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,6 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(103, 21);
             this.cbCategory.TabIndex = 0;
-            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // txtCode
             // 
@@ -181,7 +180,7 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Re-Produce Level";
             // 
-            // FrmItemAdd
+            // FrmItemUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,8 +201,8 @@
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.cbCategory);
-            this.Name = "FrmItemAdd";
-            this.Text = "frmItemAddcs";
+            this.Name = "FrmItemUpdate";
+            this.Text = "Update Item";
             this.Load += new System.EventHandler(this.FrmItemAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

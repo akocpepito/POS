@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class frmItemView
+    partial class FrmItemView
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -89,7 +89,8 @@
             this.dgItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgItem.Size = new System.Drawing.Size(544, 249);
             this.dgItem.TabIndex = 9;
-            this.dgItem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgItem_CellFormatting);
+            this.dgItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgItem_CellClick);
+            this.dgItem.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgItem_CellFormatting);
             // 
             // btnUpdate
             // 
@@ -99,6 +100,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -108,7 +110,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // txtSearch
             // 
@@ -161,6 +163,14 @@
             this.panel2.Size = new System.Drawing.Size(12, 12);
             this.panel2.TabIndex = 12;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Lime;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(12, 12);
+            this.panel3.TabIndex = 13;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -178,14 +188,6 @@
             this.label4.Size = new System.Drawing.Size(114, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Item is on Stable Level";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Lime;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(12, 12);
-            this.panel3.TabIndex = 13;
             // 
             // label5
             // 
@@ -283,7 +285,7 @@
             this.repLevelDataGridViewTextBoxColumn.Name = "repLevelDataGridViewTextBoxColumn";
             this.repLevelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // frmItemView
+            // FrmItemView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,9 +303,9 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
-            this.Name = "frmItemView";
+            this.Name = "FrmItemView";
             this.Text = "Inventory";
-            this.Load += new System.EventHandler(this.frmItemView_Load);
+            this.Load += new System.EventHandler(this.FrmItemView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgItem)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

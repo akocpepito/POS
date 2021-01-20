@@ -125,27 +125,27 @@ namespace SimplePOS
             mainMenuStrip.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e)
         {
             mainMenuStrip.BackColor = Color.FromArgb(64, 64, 64);
             mainMenuStrip.ForeColor = Color.White;
         }
 
-        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserView f = new frmUserView();
+            FrmUserView f = new FrmUserView();
             f.Show();
         }
 
-        private void positionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PositionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPosition fp = new frmPosition();
+            FrmPosition fp = new FrmPosition();
             fp.Show();
         }
 
-        private void itemsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ItemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmItemView f = new frmItemView();
+            FrmItemView f = new FrmItemView();
             f.Show();
         }
     }

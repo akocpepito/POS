@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class frmUserView
+    partial class FrmUserView
     {
         /// <summary>
         /// Required designer variable.
@@ -63,8 +63,8 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(185, 20);
             this.txtSearch.TabIndex = 1;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
             // btnAdd
             // 
@@ -74,7 +74,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -84,7 +84,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // dgUser
             // 
@@ -111,7 +111,7 @@
             this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgUser.Size = new System.Drawing.Size(451, 185);
             this.dgUser.TabIndex = 4;
-            this.dgUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellClick);
+            this.dgUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgUser_CellClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -183,7 +183,7 @@
             this.Name = "frmUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User List";
-            this.Load += new System.EventHandler(this.frmUserView_Load);
+            this.Load += new System.EventHandler(this.FrmUserView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDBset)).EndInit();

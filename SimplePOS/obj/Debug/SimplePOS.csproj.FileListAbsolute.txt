@@ -14,3 +14,4 @@ C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmUserAdd.reso
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.csprojAssemblyReference.cache
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemAdd.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemView.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.FrmItemUpdate.resources

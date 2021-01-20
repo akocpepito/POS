@@ -11,27 +11,29 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmItemView : Form
+    public partial class FrmItemView : Form
     {
-        public frmItemView()
+        public FrmItemView()
         {
             InitializeComponent();
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        int updateIndex;
+        int updateID;
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
-            using (frmItemAdd f = new frmItemAdd() { })
+            using (FrmItemAdd f = new FrmItemAdd() { })
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    refreshGrid();
+                    RefreshGrid();
                 }
             }
         }
 
-        private void refreshGrid() // Refreshes DataGridView
+        private void RefreshGrid() // Refreshes DataGridView
         {
             SqlCommand cmd = new SqlCommand("Select * from tblItem", cn);
             DataTable dt = new DataTable();
@@ -46,14 +48,14 @@ namespace SimplePOS
 
         }
 
-        private void frmItemView_Load(object sender, EventArgs e)
+        private void FrmItemView_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'itemDB.tblItem' table. You can move, or remove it, as needed.
             this.tblItemTableAdapter.Fill(this.itemDB.tblItem);
 
         }
 
-        private void dgItem_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void DgItem_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             foreach (DataGridViewRow row in dgItem.Rows)
             {
@@ -69,6 +71,31 @@ namespace SimplePOS
                     row.DefaultCellStyle.BackColor = Color.Lime;
                 }
             
+            }
+        }
+
+        private void dgItem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnUpdate.Enabled = true;
+
+            int indexRow = e.RowIndex;
+            if (indexRow >= 0)
+            {
+                updateIndex = e.RowIndex;
+                updateID = Convert.ToInt32(dgItem.Rows[e.RowIndex].Cells[0].Value);
+
+                Console.WriteLine(updateIndex + " " + dgItem.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            using (FrmItemUpdate f = new FrmItemUpdate(updateID) { })
+            {
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshGrid();
+                }
             }
         }
     }

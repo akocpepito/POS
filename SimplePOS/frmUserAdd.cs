@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmUserAdd : Form
+    public partial class FrmUserAdd : Form
     {
-        public frmUserAdd()
+        public FrmUserAdd()
         {
             InitializeComponent();
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
         int posCount;
         int userIndex;
 
@@ -31,17 +31,17 @@ namespace SimplePOS
 
 
 
-        private void frmUserAdd_Load(object sender, EventArgs e)
+        private void FrmUserAdd_Load(object sender, EventArgs e)
         {
-            checkTableIndex();
-            loadPosition(); // initializes the Position Combo Box
+            CheckTableIndex();
+            LoadPosition(); // initializes the Position Combo Box
             txtStaffNo.Enabled = false;
             txtStaffNo.Text = userIndex.ToString();
             MessageBox.Show("No. of Users in DB: " + (userIndex-1));
 
         }
 
-        private void loadPosition() // initializes the Position Combo Box
+        private void LoadPosition() // initializes the Position Combo Box
         {
             SqlCommand cmd = new SqlCommand("Select Description from tblPosition", cn);
             DataTable dt = new DataTable();
@@ -61,7 +61,7 @@ namespace SimplePOS
             cn.Close();
         }
 
-        private void checkTableIndex() // Checks how many items are in the table and what index to use for next entry
+        private void CheckTableIndex() // Checks how many items are in the table and what index to use for next entry
         {
             SqlCommand cmd = new SqlCommand("Select * from tblUser", cn);
             DataTable dt = new DataTable();
@@ -83,7 +83,7 @@ namespace SimplePOS
         }
 
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             string name = txtLname.Text + ", " + txtFname.Text + " " + txtMname.Text + ".";
             SqlCommand cmd = new SqlCommand("INSERT INTO tblUser (ID,Username,Password,LastName,FirstName,MiddleName,Address,ContactNum,Position,Name) VALUES ('" + txtStaffNo.Text + "','" + txtUname.Text + "','" + txtPwd.Text + "','" + txtLname.Text + "','" + txtFname.Text + "','" + txtMname.Text + "','" + txtAddress.Text + "','" + txtContactNum.Text + "','" + cbPosition.Text + "','" + name + "');", cn);

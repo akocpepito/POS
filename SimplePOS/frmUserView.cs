@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmUserView : Form
+    public partial class FrmUserView : Form
     {
-        public frmUserView()
+        public FrmUserView()
         {
             InitializeComponent();
         }
 
-        private void frmUserView_Load(object sender, EventArgs e)
+        private void FrmUserView_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'userDBset.tblUser' table. You can move, or remove it, as needed.
             this.tblUserTableAdapter.Fill(this.userDBset.tblUser);
@@ -26,22 +26,22 @@ namespace SimplePOS
 
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
         int updateIndex;
         int updateID;
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
-            using (frmUserAdd f = new frmUserAdd() { })
+            using (FrmUserAdd f = new FrmUserAdd() { })
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    refreshGrid();
+                    RefreshGrid();
                 }
             }
         }
 
-        private void refreshGrid() // Refreshes DataGridView
+        private void RefreshGrid() // Refreshes DataGridView
         {
             SqlCommand cmd = new SqlCommand("Select * from tblUser", cn);
             DataTable dt = new DataTable();
@@ -56,7 +56,7 @@ namespace SimplePOS
 
         }
 
-        private void dgUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnUpdate.Enabled = true;
 
@@ -68,24 +68,21 @@ namespace SimplePOS
 
                 Console.WriteLine(updateIndex + " " + dgUser.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
-
-            
-
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            using (frmUserUpdate f = new frmUserUpdate(updateID) { })
+            using (FrmUserUpdate f = new FrmUserUpdate(updateID) { })
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    refreshGrid();
+                    RefreshGrid();
                 }
             }
 
         }
 
-        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             if (txtSearch.Text.Length > 0)
             {
@@ -102,9 +99,9 @@ namespace SimplePOS
             }
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
-            refreshGrid();
+            RefreshGrid();
         }
     }
 }

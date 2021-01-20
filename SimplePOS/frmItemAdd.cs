@@ -11,15 +11,16 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmItemAdd : Form
+    public partial class FrmItemAdd : Form
     {
-        public frmItemAdd()
+        public FrmItemAdd()
         {
             InitializeComponent();
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
         int itemCount;
+        int categoryCount;
         
 
         private void CheckItemCount(string item)
@@ -43,11 +44,31 @@ namespace SimplePOS
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void LoadCategory() // initializes the Position Combo Box
+        {
+            SqlCommand cmd = new SqlCommand("Select Category from tblItem", cn);
+            DataTable dt = new DataTable();
+
+            cn.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            categoryCount = dt.Rows.Count;
+
+            for (int i = 0; i < categoryCount; i++)
+            {
+                cbCategory.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+            }
+
+            cn.Close();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             CheckItemCount(cbCategory.Text);
             string itemCode = cbCategory.Text + "-" + string.Format("{000}", itemCount);
-            SqlCommand cmd = new SqlCommand("INSERT INTO tblItem (ID,ItemCode,Category,Description,Size,Quantity,UnitPrice,RepLevel) VALUES ('" +itemCount+ "','" + itemCode + "','" + cbCategory.Text + "','" + txtDesc.Text + "','" + txtSize.Text + "','" + txtQuantity.Text + "','" + txtPrice.Text + "','" + txtReproduce.Text + "')", cn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tblItem (ID,ItemCode,Category,Description,Size,Quantity,UnitPrice,RepLevel) VALUES ('" +itemCount+ "','" + txtCode.Text + "','" + cbCategory.Text + "','" + txtDesc.Text + "','" + txtSize.Text + "','" + txtQuantity.Text + "','" + txtPrice.Text + "','" + txtReproduce.Text + "')", cn);
 
             try
             {
@@ -70,9 +91,16 @@ namespace SimplePOS
             }
         }
 
-        private void frmItemAdd_Load(object sender, EventArgs e)
+        private void FrmItemAdd_Load(object sender, EventArgs e)
         {
             cbCategory.Items.Add("Test");
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckItemCount(cbCategory.Text);
+            int decLength = itemCount.ToString("D").Length + 2;
+            txtCode.Text = cbCategory.Text +"-"+ itemCount.ToString("D" + decLength.ToString());
         }
     }
 }

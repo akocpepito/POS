@@ -148,7 +148,7 @@
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.userToolStripMenuItem.Text = "User";
-            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            this.userToolStripMenuItem.Click += new System.EventHandler(this.UserToolStripMenuItem_Click);
             // 
             // positionToolStripMenuItem
             // 
@@ -157,7 +157,7 @@
             this.positionToolStripMenuItem.Name = "positionToolStripMenuItem";
             this.positionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.positionToolStripMenuItem.Text = "Position";
-            this.positionToolStripMenuItem.Click += new System.EventHandler(this.positionToolStripMenuItem_Click);
+            this.positionToolStripMenuItem.Click += new System.EventHandler(this.PositionToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
@@ -174,7 +174,7 @@
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
             this.itemsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.itemsToolStripMenuItem.Text = "Items";
-            this.itemsToolStripMenuItem.Click += new System.EventHandler(this.itemsToolStripMenuItem_Click);
+            this.itemsToolStripMenuItem.Click += new System.EventHandler(this.ItemsToolStripMenuItem_Click);
             // 
             // customersToolStripMenuItem
             // 
@@ -229,7 +229,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.MainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

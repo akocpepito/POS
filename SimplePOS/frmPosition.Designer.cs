@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class frmPosition
+    partial class FrmPosition
     {
         /// <summary>
         /// Required designer variable.
@@ -73,7 +73,7 @@
             this.dgPosition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPosition.Size = new System.Drawing.Size(202, 152);
             this.dgPosition.TabIndex = 0;
-            this.dgPosition.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPosition_CellClick);
+            this.dgPosition.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPosition_CellClick);
             // 
             // numberDataGridViewTextBoxColumn
             // 
@@ -140,7 +140,7 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -150,7 +150,7 @@
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -160,7 +160,7 @@
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnClose
             // 
@@ -170,7 +170,7 @@
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnSave
             // 
@@ -180,7 +180,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // tblPositionTableAdapter
             // 
@@ -205,7 +205,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmPosition_Load);
+            this.Load += new System.EventHandler(this.FrmPosition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPositionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOSDBDataSet3)).EndInit();

@@ -11,16 +11,16 @@ using System.Data.SqlClient;
 
 namespace SimplePOS
 {
-    public partial class frmPosition : Form
+    public partial class FrmPosition : Form
     {
         
-        public frmPosition()
+        public FrmPosition()
         {
             InitializeComponent();
             //MessageBox.Show(cn.ConnectionString);
         }
 
-        private void frmPosition_Load(object sender, EventArgs e) // Initializes the form
+        private void FrmPosition_Load(object sender, EventArgs e) // Initializes the form
         {
             // TODO: This line of code loads data into the 'pOSDBDataSet3.tblPosition' table. You can move, or remove it, as needed.
             this.tblPositionTableAdapter.Fill(this.pOSDBDataSet3.tblPosition);
@@ -31,11 +31,11 @@ namespace SimplePOS
             btnDelete.Enabled = false;
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
+        readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-SFOR7QM\SQLEXPRESS;Initial Catalog=POSDB;Integrated Security=True");
         int indexRow;
         int positionIndex;
 
-        private void refreshGrid() // Refreshes DataGridView
+        private void RefreshGrid() // Refreshes DataGridView
         {
             SqlCommand cmd = new SqlCommand("Select * from tblPosition", cn);
             DataTable dt = new DataTable();
@@ -50,7 +50,7 @@ namespace SimplePOS
         
         }
 
-        private void checkTableIndex() // Checks how many items are in the table and what index to use for next entry
+        private void CheckTableIndex() // Checks how many items are in the table and what index to use for next entry
         {
             SqlCommand cmd = new SqlCommand("Select * from tblPosition", cn);
             DataTable dt = new DataTable();
@@ -79,16 +79,16 @@ namespace SimplePOS
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             btnSave.Visible = true;
             btnAdd.Visible = false;
             txtPosDesc.Enabled = true;
-            checkTableIndex();
+            CheckTableIndex();
             txtPosNo.Text = positionIndex.ToString();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             
             SqlCommand cmd = new SqlCommand("INSERT INTO tblPosition (Number,Description) VALUES ('" + txtPosNo.Text + "','" + txtPosDesc.Text + "');", cn);
@@ -108,7 +108,7 @@ namespace SimplePOS
                
                 ClearFields();
 
-                refreshGrid();
+                RefreshGrid();
 
             }
             catch (Exception ex)
@@ -119,12 +119,12 @@ namespace SimplePOS
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
         } // exits the form when close is pressed
 
-        private void dgPosition_CellClick(object sender, DataGridViewCellEventArgs e) // Updates the fields according to the cell selected in DGV
+        private void DgPosition_CellClick(object sender, DataGridViewCellEventArgs e) // Updates the fields according to the cell selected in DGV
         {
             btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
@@ -139,21 +139,21 @@ namespace SimplePOS
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("UPDATE tblPosition SET Description='"+txtPosDesc.Text+"' WHERE Number='"+txtPosNo.Text+"'", cn);
 
             cn.Open();
 
-            SqlDataReader sdr = cmd.ExecuteReader();
+            cmd.ExecuteReader();
             cn.Close();
 
             MessageBox.Show("Position "+txtPosNo.Text+"has been updated!");
 
-            refreshGrid();
+            RefreshGrid();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("DELETE FROM tblPosition WHERE Number='" + txtPosNo.Text + "'", cn);
 
@@ -165,7 +165,7 @@ namespace SimplePOS
             MessageBox.Show("Position " + txtPosNo.Text + "has been deleted!");
 
             ClearFields();
-            refreshGrid();
+            RefreshGrid();
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
         }

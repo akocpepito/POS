@@ -1,6 +1,6 @@
 ﻿namespace SimplePOS
 {
-    partial class frmUserAdd
+    partial class FrmUserAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -217,7 +217,7 @@
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnCancel
             // 
@@ -258,7 +258,7 @@
             this.Name = "frmUserAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add User";
-            this.Load += new System.EventHandler(this.frmUserAdd_Load);
+            this.Load += new System.EventHandler(this.FrmUserAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
