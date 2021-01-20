@@ -123,10 +123,12 @@ namespace SimplePOS
         {
             InitializeComponent();
             mainMenuStrip.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
+            LogoutStrip.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            ClockTimer.Start();
             mainMenuStrip.BackColor = Color.FromArgb(64, 64, 64);
             mainMenuStrip.ForeColor = Color.White;
         }
@@ -147,6 +149,17 @@ namespace SimplePOS
         {
             FrmItemView f = new FrmItemView();
             f.Show();
+        }
+
+        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCategory f = new frmCategory();
+            f.Show();
+        }
+
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+            txtTime.Text = DateTime.Now.ToString();
         }
     }
 }

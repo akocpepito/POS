@@ -78,11 +78,6 @@ namespace SimplePOS
                 cn.Close();
 
                 MessageBox.Show("New Item has been added!");
-
-                //                ClearFields();
-
-                //              refreshGrid();
-
             }
             catch (Exception ex)
             {
@@ -94,6 +89,7 @@ namespace SimplePOS
         private void FrmItemAdd_Load(object sender, EventArgs e)
         {
             cbCategory.Items.Add("Test");
+            txtCode.Enabled = false;
         }
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)

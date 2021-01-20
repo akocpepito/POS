@@ -15,3 +15,4 @@ C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.csprojAssemblyR
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemAdd.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemView.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.FrmItemUpdate.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmCategory.resources

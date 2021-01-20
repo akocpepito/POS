@@ -61,14 +61,14 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(74, 21);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(185, 20);
+            this.txtSearch.Size = new System.Drawing.Size(319, 20);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(300, 19);
+            this.btnAdd.Location = new System.Drawing.Point(462, 305);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(381, 19);
+            this.btnUpdate.Location = new System.Drawing.Point(543, 305);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 3;
@@ -109,7 +109,7 @@
             this.dgUser.ReadOnly = true;
             this.dgUser.RowHeadersVisible = false;
             this.dgUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgUser.Size = new System.Drawing.Size(451, 185);
+            this.dgUser.Size = new System.Drawing.Size(605, 242);
             this.dgUser.TabIndex = 4;
             this.dgUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgUser_CellClick);
             // 
@@ -169,18 +169,18 @@
             // 
             this.tblUserTableAdapter.ClearBeforeFill = true;
             // 
-            // frmUserView
+            // FrmUserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 254);
+            this.ClientSize = new System.Drawing.Size(632, 339);
             this.Controls.Add(this.dgUser);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmUserView";
+            this.Name = "FrmUserView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User List";
             this.Load += new System.EventHandler(this.FrmUserView_Load);

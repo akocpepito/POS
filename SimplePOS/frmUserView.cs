@@ -68,6 +68,10 @@ namespace SimplePOS
 
                 Console.WriteLine(updateIndex + " " + dgUser.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
+            else
+            {
+                btnUpdate.Enabled = false;            
+            }
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -86,7 +90,7 @@ namespace SimplePOS
         {
             if (txtSearch.Text.Length > 0)
             {
-                SqlCommand cmd = new SqlCommand("Select * from tblUser where LastName = '" + txtSearch.Text + "'", cn);
+                SqlCommand cmd = new SqlCommand("Select * from tblUser where Name LIKE '%" + txtSearch.Text + "%'", cn);
                 DataTable dt = new DataTable();
 
                 cn.Open();
