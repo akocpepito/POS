@@ -27,7 +27,11 @@ namespace SimplePOS
 
         private void btnOkay_Click(object sender, EventArgs e)
         {
-            fpm.ComputeTotal(Convert.ToInt32(txtDiscount.Text));
+            if (!txtDiscount.Text.Equals(""))
+                fpm.ComputeTotal(Convert.ToInt32(txtDiscount.Text));
+            else {
+                this.DialogResult = DialogResult.None;
+            }
         }
     }
 }

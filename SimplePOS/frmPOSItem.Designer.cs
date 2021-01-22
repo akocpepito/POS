@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgPOSItem = new System.Windows.Forms.DataGridView();
-            this.itemDBPOS = new SimplePOS.ItemDBPOS();
-            this.tblItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblItemTableAdapter = new SimplePOS.ItemDBPOSTableAdapters.tblItemTableAdapter();
             this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +38,12 @@
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemDBPOS = new SimplePOS.ItemDBPOS();
+            this.tblItemTableAdapter = new SimplePOS.ItemDBPOSTableAdapters.tblItemTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgPOSItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemDBPOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemDBPOS)).BeginInit();
             this.SuspendLayout();
             // 
             // dgPOSItem
@@ -62,27 +62,13 @@
             this.sizeDataGridViewTextBoxColumn,
             this.repLevelDataGridViewTextBoxColumn});
             this.dgPOSItem.DataSource = this.tblItemBindingSource;
-            this.dgPOSItem.Location = new System.Drawing.Point(12, 83);
+            this.dgPOSItem.Location = new System.Drawing.Point(12, 105);
             this.dgPOSItem.Name = "dgPOSItem";
             this.dgPOSItem.ReadOnly = true;
             this.dgPOSItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgPOSItem.Size = new System.Drawing.Size(490, 196);
             this.dgPOSItem.TabIndex = 0;
             this.dgPOSItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPOSItem_CellDoubleClick);
-            // 
-            // itemDBPOS
-            // 
-            this.itemDBPOS.DataSetName = "ItemDBPOS";
-            this.itemDBPOS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblItemBindingSource
-            // 
-            this.tblItemBindingSource.DataMember = "tblItem";
-            this.tblItemBindingSource.DataSource = this.itemDBPOS;
-            // 
-            // tblItemTableAdapter
-            // 
-            this.tblItemTableAdapter.ClearBeforeFill = true;
             // 
             // itemCodeDataGridViewTextBoxColumn
             // 
@@ -140,6 +126,20 @@
             this.repLevelDataGridViewTextBoxColumn.Name = "repLevelDataGridViewTextBoxColumn";
             this.repLevelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // tblItemBindingSource
+            // 
+            this.tblItemBindingSource.DataMember = "tblItem";
+            this.tblItemBindingSource.DataSource = this.itemDBPOS;
+            // 
+            // itemDBPOS
+            // 
+            this.itemDBPOS.DataSetName = "ItemDBPOS";
+            this.itemDBPOS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblItemTableAdapter
+            // 
+            this.tblItemTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPOSItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,8 +151,8 @@
             this.Text = "frmPOSItem";
             this.Load += new System.EventHandler(this.frmPOSItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPOSItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemDBPOS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemDBPOS)).EndInit();
             this.ResumeLayout(false);
 
         }
