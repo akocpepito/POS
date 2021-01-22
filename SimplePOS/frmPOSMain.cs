@@ -56,6 +56,7 @@ namespace SimplePOS
 
         public void ComputeTotal(int _discount)
         {
+            totalPrice = 0;
             if (dt.Rows.Count < 1)
             {
                 lblTotalPrice.Text = "0.00";

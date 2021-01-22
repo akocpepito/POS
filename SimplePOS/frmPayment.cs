@@ -45,7 +45,7 @@ namespace SimplePOS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            using (frmReceipt f = new frmReceipt() { })
+            using (frmReceipt f = new frmReceipt(this.dt) { })
             {
                 f.ShowDialog();
             }

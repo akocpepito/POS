@@ -30,5 +30,16 @@ namespace SimplePOS
             this.listView1.Width = 20;
             this.listView1.Dock = DockStyle.Fill;
         }
+
+        public void PopulateListView()
+        {
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.SubItems.Add(data.Rows[i].ItemArray[0].ToString());
+                listView1.Items.Add(lvi);
+            }
+            listView1.Refresh();
+        }
     }
 }
