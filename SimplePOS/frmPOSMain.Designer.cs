@@ -36,6 +36,7 @@
             this.frmPOSMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnDiscount = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPOSMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmPOSMainBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -105,11 +106,22 @@
             this.btnDiscount.UseVisualStyleBackColor = true;
             this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
+            // btnPayment
+            // 
+            this.btnPayment.Location = new System.Drawing.Point(627, 397);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(75, 23);
+            this.btnPayment.TabIndex = 6;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
             // frmPOSMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.btnDiscount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRemoveItem);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDiscount;
+        private System.Windows.Forms.Button btnPayment;
     }
 }

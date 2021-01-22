@@ -83,6 +83,12 @@
     <Compile Include="frmItemView.Designer.cs">
       <DependentUpon>frmItemView.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPOSAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="frmPOSMain.Designer.cs">
       <DependentUpon>frmPOSMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.cs">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserUpdate.cs">
       <SubType>Form</SubType>
@@ -190,6 +202,9 @@
     <EmbeddedResource Include="frmItemView.resx">
       <DependentUpon>frmItemView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPOSAdd.resx">
       <DependentUpon>frmPOSAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPOSMain.resx">
       <DependentUpon>frmPOSMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserUpdate.resx">
       <DependentUpon>frmUserUpdate.cs</DependentUpon>

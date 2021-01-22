@@ -20,3 +20,5 @@ C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSAdd.resou
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSItem.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSMain.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmDiscount.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPayment.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmReceipt.resources

@@ -22,10 +22,22 @@ namespace SimplePOS
         DataTable dt = new DataTable();
         string[] dataString = new string[5];
         int deleteRowIndex;
+        double totalPrice = 0;
+        double discount = 0;
 
         public void setDataTable(DataGridView dt)
         {
             data = dt;
+        }
+
+        public DataTable getDataTable()
+        {
+            return this.dt;
+        }
+
+        public Double getTotal()
+        {
+            return this.totalPrice;
         }
 
         public void setDataRow(string[] row)
@@ -44,9 +56,6 @@ namespace SimplePOS
 
         public void ComputeTotal(int _discount)
         {
-            double totalPrice = 0;
-            double discount = 0;
-
             if (dt.Rows.Count < 1)
             {
                 lblTotalPrice.Text = "0.00";
@@ -97,6 +106,15 @@ namespace SimplePOS
             using (frmDiscount f = new frmDiscount(this) { })
             {
                 f.ShowDialog();
+            }
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            using (frmPayment f = new frmPayment(this) { })
+            {
+                f.ShowDialog();
+            
             }
         }
     }
