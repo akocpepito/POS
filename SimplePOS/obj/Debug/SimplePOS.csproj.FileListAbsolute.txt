@@ -16,3 +16,7 @@ C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemAdd.reso
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmItemView.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.FrmItemUpdate.resources
 C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmCategory.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSAdd.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSItem.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmPOSMain.resources
+C:\Users\Jr\source\repos\SimplePOS\SimplePOS\obj\Debug\SimplePOS.frmDiscount.resources

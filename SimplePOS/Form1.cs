@@ -124,6 +124,7 @@ namespace SimplePOS
             InitializeComponent();
             mainMenuStrip.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
             LogoutStrip.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
+            Basket b = new Basket();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -160,6 +161,12 @@ namespace SimplePOS
         private void ClockTimer_Tick(object sender, EventArgs e)
         {
             txtTime.Text = DateTime.Now.ToString();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmPOSMain f = new frmPOSMain();
+            f.Show();
         }
     }
 }

@@ -79,7 +79,7 @@
             this.mainMenuStrip.Location = new System.Drawing.Point(5, 53);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mainMenuStrip.Size = new System.Drawing.Size(126, 206);
+            this.mainMenuStrip.Size = new System.Drawing.Size(126, 225);
             this.mainMenuStrip.TabIndex = 0;
             // 
             // homeToolStripMenuItem
@@ -161,6 +161,7 @@
             this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.toolStripMenuItem2.Size = new System.Drawing.Size(120, 50);
             this.toolStripMenuItem2.Text = "Transactions";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 

@@ -34,6 +34,21 @@ namespace SimplePOS
             btnSave.Visible = true;
         }
 
+        private void RefreshGrid() // Refreshes DataGridView
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tblCategory", cn);
+            DataTable dt = new DataTable();
+
+            cn.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            cn.Close();
+
+            dgCategory.DataSource = dt;
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO tblCategory (ItemCode,Description) VALUES ('" + txtCatCode.Text + "','" + txtCatDesc.Text + "');", cn);
@@ -51,7 +66,7 @@ namespace SimplePOS
                 MessageBox.Show("New Category has been added!");
 
                 //ClearFields();
-                // RefreshGrid();
+                RefreshGrid();
 
             }
             catch (Exception ex)
@@ -59,6 +74,11 @@ namespace SimplePOS
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

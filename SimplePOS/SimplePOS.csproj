@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscount.Designer.cs">
+      <DependentUpon>frmDiscount.cs</DependentUpon>
     </Compile>
     <Compile Include="frmItemUpdate.cs">
       <SubType>Form</SubType>
@@ -75,6 +82,24 @@
     </Compile>
     <Compile Include="frmItemView.Designer.cs">
       <DependentUpon>frmItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPOSAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPOSAdd.Designer.cs">
+      <DependentUpon>frmPOSAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPOSItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPOSItem.Designer.cs">
+      <DependentUpon>frmPOSItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPOSMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPOSMain.Designer.cs">
+      <DependentUpon>frmPOSMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserUpdate.cs">
       <SubType>Form</SubType>
@@ -104,6 +129,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ItemDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDBPOS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemDBPOS.xsd</DependentUpon>
     </Compile>
     <Compile Include="POSDBData.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,6 +178,9 @@
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscount.resx">
+      <DependentUpon>frmDiscount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmItemUpdate.resx">
       <DependentUpon>frmItemUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +189,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmItemView.resx">
       <DependentUpon>frmItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPOSAdd.resx">
+      <DependentUpon>frmPOSAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPOSItem.resx">
+      <DependentUpon>frmPOSItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPOSMain.resx">
+      <DependentUpon>frmPOSMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserUpdate.resx">
       <DependentUpon>frmUserUpdate.cs</DependentUpon>
@@ -177,6 +219,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ItemDB.xsc">
       <DependentUpon>ItemDB.xsd</DependentUpon>
@@ -188,6 +231,17 @@
     </None>
     <None Include="ItemDB.xss">
       <DependentUpon>ItemDB.xsd</DependentUpon>
+    </None>
+    <None Include="ItemDBPOS.xsc">
+      <DependentUpon>ItemDBPOS.xsd</DependentUpon>
+    </None>
+    <None Include="ItemDBPOS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemDBPOS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ItemDBPOS.xss">
+      <DependentUpon>ItemDBPOS.xsd</DependentUpon>
     </None>
     <None Include="POSDBData.xsc">
       <DependentUpon>POSDBData.xsd</DependentUpon>
@@ -255,6 +309,7 @@
     <None Include="POSDBDataSet4.xss">
       <DependentUpon>POSDBDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\frmPOSMain.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,6 +333,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchitem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
