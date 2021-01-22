@@ -33,10 +33,10 @@
             this.dgPOSMain = new System.Windows.Forms.DataGridView();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.btnRemoveItem = new System.Windows.Forms.Button();
-            this.frmPOSMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnDiscount = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
+            this.frmPOSMainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgPOSMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmPOSMainBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.lblTotalPrice.Size = new System.Drawing.Size(91, 42);
             this.lblTotalPrice.TabIndex = 2;
             this.lblTotalPrice.Text = "0.00";
+            this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
             // 
             // btnRemoveItem
             // 
@@ -82,10 +83,6 @@
             this.btnRemoveItem.Text = "Remove";
             this.btnRemoveItem.UseVisualStyleBackColor = true;
             this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
-            // 
-            // frmPOSMainBindingSource
-            // 
-            this.frmPOSMainBindingSource.DataSource = typeof(SimplePOS.frmPOSMain);
             // 
             // label1
             // 
@@ -115,6 +112,10 @@
             this.btnPayment.Text = "Payment";
             this.btnPayment.UseVisualStyleBackColor = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // frmPOSMainBindingSource
+            // 
+            this.frmPOSMainBindingSource.DataSource = typeof(SimplePOS.frmPOSMain);
             // 
             // frmPOSMain
             // 

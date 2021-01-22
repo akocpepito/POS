@@ -65,7 +65,7 @@
             this.numberDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dgPosition.DataSource = this.tblPositionBindingSource;
-            this.dgPosition.Location = new System.Drawing.Point(12, 69);
+            this.dgPosition.Location = new System.Drawing.Point(12, 55);
             this.dgPosition.MultiSelect = false;
             this.dgPosition.Name = "dgPosition";
             this.dgPosition.ReadOnly = true;
@@ -81,6 +81,7 @@
             this.numberDataGridViewTextBoxColumn.HeaderText = "No";
             this.numberDataGridViewTextBoxColumn.MaxInputLength = 2;
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.ReadOnly = true;
             this.numberDataGridViewTextBoxColumn.Width = 50;
             // 
             // descriptionDataGridViewTextBoxColumn
@@ -88,6 +89,7 @@
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionDataGridViewTextBoxColumn.Width = 150;
             // 
             // tblPositionBindingSource
@@ -186,7 +188,7 @@
             // 
             this.tblPositionTableAdapter.ClearBeforeFill = true;
             // 
-            // frmPosition
+            // FrmPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,7 +205,7 @@
             this.Controls.Add(this.dgPosition);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmPosition";
+            this.Name = "FrmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmPosition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPosition)).EndInit();

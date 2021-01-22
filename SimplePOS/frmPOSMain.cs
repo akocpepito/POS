@@ -118,5 +118,10 @@ namespace SimplePOS
             
             }
         }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
